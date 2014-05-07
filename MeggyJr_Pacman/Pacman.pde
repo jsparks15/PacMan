@@ -41,10 +41,10 @@ void movement()
   if ((xcoord < 1) &&((ycoord == 3) || (ycoord == 4))){
     xcoord = 1;
   }
-  if ((xcoord < 1) && (ycoord ==6)){
-    xcoord =1;
+  if ((xcoord < 1) && (ycoord == 6)){
+    xcoord = 1;
   }
-  if ((xcoord > 6) && (ycoord == 1) || (ycoord == 3) || (ycoord == 4)|| (ycoord ==6)){
+  if ((xcoord > 6) && ((ycoord == 1) || (ycoord == 3) || (ycoord == 4)|| (ycoord ==6))){
     xcoord = 6;
   }
   
