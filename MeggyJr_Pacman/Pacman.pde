@@ -47,13 +47,13 @@ void movement()
   if ((xcoord > 6) && ((ycoord == 1) || (ycoord == 3) || (ycoord == 4)|| (ycoord ==6))){
     xcoord = 6;
   }
-  
+ 
 }// end of movement
 
 void pacman()
 {
  DrawPx(xcoord,ycoord,Orange); 
- /*if (ReadPx(xcoord,ycoord = Blue)){       //should make you not go on blue... doesnt work
-   ((xcoord = xcoord) && (ycoord = ycoord));
+ /*if (ReadPx(xcoord,ycoord = middleBoundary[8])){       //should make you not go on blue... doesnt work
+   (((xcoord) !++) && ((ycoord) !++));
  }*/
 }//end of pacman

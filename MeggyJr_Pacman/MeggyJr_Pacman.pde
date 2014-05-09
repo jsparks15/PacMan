@@ -25,7 +25,11 @@ int xcoordC = 3;
 int ycoordC = 3;
 int xcoordB = 4;
 int ycoordB = 4;
-int direction = 360;
+int direction = 0; // going to make it a 0->3
+int boundaryArray [8] = {(2,2),(2,3),(2,5),(3,2),(5,2),(5,4),(5,5),(4,5)};
+boolean gameOver = false;
+
+
 
 void setup()                    
 {
