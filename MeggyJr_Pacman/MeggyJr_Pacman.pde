@@ -29,7 +29,33 @@ int direction = 0; // going to make it a 0->3
 int boundaryArray [8] = {(2,2),(2,3),(2,5),(3,2),(5,2),(5,4),(5,5),(4,5)};
 boolean gameOver = false;
 
-
+boolean collision(int direction) // Collision detection with walls
+{ 
+  if (direction == 0)
+  {
+    if (ReadPx(xcoord,ycoord+1) == Blue)
+      return false;
+      else return true;
+  }
+  else if (direction == 1)
+  {
+    if (ReadPx(xcoord,ycoord+1) == Blue)
+      return false;
+      else return true;
+  }
+  else if (direction == 2)
+  {
+    if (ReadPx(xcoord,ycoord-1) == Blue)
+      return false;
+      else return true;
+  }
+  else if (direction == 3)
+  {
+    if (ReadPx(xcoord-1, ycoord) == Blue)
+      return false;
+      else return true;
+  }
+} 
 
 void setup()                    
 {

@@ -3,22 +3,22 @@ void movement()
   CheckButtonsDown();
   
   if (Button_Up)
-    //direction = 0;    // Snake goes up
+    direction = 0;    // Snake goes up
       //if (direction == 0)
         ycoord ++;
   
   if (Button_Right)
-    //direction = 90;    // Snake goes right
+    direction = 1;    // Snake goes right
       //if (direction == 90)
         xcoord ++;
 
   if (Button_Down)
-    //direction = 180;    // Snake goes down
+    direction = 2;    // Snake goes down
       //if (direction == 180)
         ycoord --;
   
   if (Button_Left)
-    //direction = 360;    // Snake goes left
+    direction = 3;    // Snake goes left
       //if (direction == 360)
         xcoord --;
         
