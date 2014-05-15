@@ -1,7 +1,7 @@
 void Blinky()
 {
   DrawPx(xcoordB,ycoordB,Red);
-  CheckButtonsDown();
+  /*CheckButtonsDown();
     if((Button_Up) || (Button_Down) || (Button_Right) || (Button_Left)){
       direction = (random (4));{
         if(direction == 0){
@@ -41,7 +41,7 @@ void Blinky()
         }
       if ((xcoordB > 6) && ((ycoordB == 1) || (ycoordB == 3) || (ycoordB == 4)|| (ycoordB ==6))){
           xcoordB = 6;
-        }
+        }*/
 }
 
 

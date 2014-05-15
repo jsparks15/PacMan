@@ -3,23 +3,19 @@ void movement()
   CheckButtonsDown();
   
   if (Button_Up)
-    direction = 0;    // Snake goes up
-      //if (direction == 0)
-        ycoord ++;
+    //if(collision(0) == false)
+       ycoord ++;
   
   if (Button_Right)
-    direction = 1;    // Snake goes right
-      //if (direction == 90)
+    //if(collision(1) == false)
         xcoord ++;
 
   if (Button_Down)
-    direction = 2;    // Snake goes down
-      //if (direction == 180)
+    //if(collision(2) == false)
         ycoord --;
   
   if (Button_Left)
-    direction = 3;    // Snake goes left
-      //if (direction == 360)
+    //if(collision(3) == false)
         xcoord --;
         
  
@@ -57,3 +53,6 @@ void pacman()
    (((xcoord) !++) && ((ycoord) !++));
  }*/
 }//end of pacman
+
+
+
