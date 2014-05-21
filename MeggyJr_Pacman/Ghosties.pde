@@ -52,5 +52,46 @@ void Blinky()
 void Clyde()
 {
   DrawPx(xcoordC,ycoordC,Violet);
+  CheckButtonsDown();
+    if((Button_Up) || (Button_Down) || (Button_Right) || (Button_Left)){
+      dir = (random (4));{
+        if(dir == 0){
+          ycoordC ++;
+          }
+        if(dir == 1){          
+          xcoordC ++;
+          }
+        if(dir == 2){
+          ycoordC --;
+          }
+        if(dir == 3){
+          xcoordC --;
+          }
+    }
+    }  
+     if (ycoordC < 1){
+        ycoordC =1;
+        }
+      if (ycoordC > 6){
+         ycoordC = 6;
+        }
+      if (xcoordC > 7){
+          xcoordC = 0;
+        }
+      if (xcoordC < 0){
+          xcoordC =7;
+        }
+      if ((xcoordC < 1) && (ycoordC == 1)){
+          xcoordC = 1;
+        }
+      if ((xcoordC < 1) &&((ycoordC == 3) || (ycoordC == 4))){
+          xcoordC = 1;
+        }
+      if ((xcoordC < 1) && (ycoordC == 6)){
+          xcoordC = 1;
+        }
+      if ((xcoordC > 6) && ((ycoordC == 1) || (ycoordC == 3) || (ycoordC == 4)|| (ycoordC ==6))){
+          xcoordC = 6;
+        }
   
 }
