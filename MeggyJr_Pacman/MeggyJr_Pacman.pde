@@ -25,8 +25,8 @@ int xcoordC = 3;
 int ycoordC = 3;
 int xcoordB = 4;
 int ycoordB = 4;
-int direction = 0; // going to make it a 0->3
-int marker = 25;
+int dir = 5; // going to make it a 0->3
+int marker = 1;
 struct Dots 
   {
     int x;
@@ -62,31 +62,93 @@ struct Dots
  Dots dotArray [25] = {s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25};
 boolean gameOver = false;
 
-boolean collision(int direction) // Collision detection with walls
+
+boolean drawDot(int dir)
+  {
+    if (dir == 0)
+  {
+    if (ReadPx(xcoord,ycoord) == Dark)
+      return false;    
+      else return true;    
+    } 
+    else if (dir == 1)
+    {
+    if (ReadPx(xcoord,ycoord) == Dark)
+      return false;
+      else return true;
+    }
+    else if (dir == 2)
+    {
+    if (ReadPx(xcoord,ycoord) == Dark)
+      return false;
+      else return true;  
+    }
+    else if (dir == 3)
+    {
+      if (ReadPx(xcoord, ycoord) == Dark)
+        return false;
+        else return true;
+    
+  }
+  }
+
+boolean collision(int dir) // Collision detection with walls
 { 
-  if (direction == 0)
+  if (dir == 0)
   {
     if (ReadPx(xcoord,ycoord+1) == Blue)
-      return false;
-      else return true;
-  }
-  else if (direction == 1)
+      return true;    
+      else return false;    
+  } 
+  else if (dir == 1)
   {
     if (ReadPx(xcoord+1,ycoord) == Blue)
-      return false;
-      else return true;
+      return true;
+      else return false;
   }
-  else if (direction == 2)
+  else if (dir == 2)
   {
     if (ReadPx(xcoord,ycoord-1) == Blue)
-      return false;
-      else return true;
+      return true;
+      else return false;  
   }
-  else if (direction == 3)
+  else if (dir == 3)
   {
     if (ReadPx(xcoord-1, ycoord) == Blue)
-      return false;
-      else return true;
+      
+      return true;
+      else return false;
+    
+  }
+} 
+
+boolean collisionB(int dir) // Collision detection with walls
+{ 
+  if (dir == 0)
+  {
+    if (ReadPx(xcoordB,ycoordB+1) == Blue)
+      return true;    
+      else return false;    
+  } 
+  else if (dir == 1)
+  {
+    if (ReadPx(xcoordB+1,ycoordB) == Blue)
+      return true;
+      else return false;
+  }
+  else if (dir == 2)
+  {
+    if (ReadPx(xcoordB,ycoordB-1) == Blue)
+      return true;
+      else return false;  
+  }
+  else if (dir == 3)
+  {
+    if (ReadPx(xcoordB-1, ycoordB) == Blue)
+    
+      return true;
+      else return false;
+    
   }
 } 
 
@@ -98,12 +160,13 @@ void setup()
 
 void loop()                     
 {
+  boundary();
   movement();
   dots();
   Clyde();
   Blinky();
   pacman();
-  boundary();
+  
  
   
   DisplaySlate();

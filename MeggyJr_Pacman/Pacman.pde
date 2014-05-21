@@ -2,21 +2,46 @@ void movement()
 {
   CheckButtonsDown();
   
-  if (Button_Up)
-    //if(collision(0) == false)
+  if(Button_Up){
+    dir = 0;
+  }
+  if(Button_Left){
+    dir = 3;
+}
+  if(Button_Right){
+    dir = 1;
+}
+  if(Button_Down){
+    dir = 2;
+  }
+    
+  
+  if (Button_Up){
+    if(collision(0) == false){
        ycoord ++;
-  
-  if (Button_Right)
-    //if(collision(1) == false)
+       
+    }
+    }
+  if (Button_Right){
+    if(collision(1) == false){
         xcoord ++;
-
-  if (Button_Down)
-    //if(collision(2) == false)
+        
+    }
+        }
+  if (Button_Down){
+    if(collision(2) == false){
         ycoord --;
+        
+    }
+  }
   
-  if (Button_Left)
-    //if(collision(3) == false)
+  if (Button_Left){
+    if(collision(3) == false){
         xcoord --;
+    }
+  }
+    
+          
         
  
   if (ycoord < 1){
