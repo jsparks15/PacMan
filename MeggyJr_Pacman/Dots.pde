@@ -1,4 +1,4 @@
-void dots()
+void dots()//I couldn't figure out how to "eat" dots so now you just have to survive. Each movement gives you a point and a certain amount of points win
 {
   if(xcoord == 1 && ycoord == 1){
     boolean dot1 = true;

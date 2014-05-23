@@ -42,7 +42,7 @@ void movement()
   }
     
           
-        
+         
  
   if (ycoord < 1){
     ycoord =1;
@@ -74,7 +74,7 @@ void movement()
 void pacman()
 {
  DrawPx(xcoord,ycoord,Orange); 
- /*if (ReadPx(xcoord,ycoord = middleBoundary[8])){       //should make you not go on blue... doesnt work
+ /*if (ReadPx(xcoord,ycoord = middleBoundary[8])){       //should make you not go on blue... doesnt work. Failed attempt
    (((xcoord) !++) && ((ycoord) !++));
  }*/
 }//end of pacman

@@ -131,7 +131,7 @@ void setup()
 }
 
 
-void loop()                     
+void loop()        // Order matters...                      
 {
   boundary();
   movement();

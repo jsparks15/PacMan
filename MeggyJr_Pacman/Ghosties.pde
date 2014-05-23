@@ -1,4 +1,4 @@
-void Blinky()
+void Blinky()//This is a ghost that moves randomly and cares about the boundaries
 {
   DrawPx(xcoordB,ycoordB,Red);
   CheckButtonsDown();
@@ -9,7 +9,7 @@ void Blinky()
           ycoordB ++;
           }
         if(dir == 1){
-          if(collisionB(1) == false)
+          if(collisionB(1) == false)     // This makes Blinky obey the boundaries
           xcoordB ++;
           }
         if(dir == 2){
@@ -23,7 +23,7 @@ void Blinky()
     }
     }  
      if (ycoordB < 1){
-        ycoordB =1;
+        ycoordB =1;            //this makes him wrap around
         }
       if (ycoordB > 6){
          ycoordB = 6;
@@ -49,7 +49,7 @@ void Blinky()
 }
 
 
-void Clyde()
+void Clyde()//Clyde is super spooky and can go through the walls
 {
   DrawPx(xcoordC,ycoordC,Violet);
   CheckButtonsDown();
@@ -58,7 +58,7 @@ void Clyde()
         if(dir == 0){
           ycoordC ++;
           }
-        if(dir == 1){          
+        if(dir == 1){          // This makes him move randomly
           xcoordC ++;
           }
         if(dir == 2){
@@ -78,7 +78,7 @@ void Clyde()
       if (xcoordC > 7){
           xcoordC = 0;
         }
-      if (xcoordC < 0){
+      if (xcoordC < 0){       // This makes him wrap around
           xcoordC =7;
         }
       if ((xcoordC < 1) && (ycoordC == 1)){
